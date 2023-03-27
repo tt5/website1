@@ -1,0 +1,11 @@
+systemctl enable --user podman.socket
+systemctl start --user podman.socket
+
+podman build . -t solidstart
+podman run -dt -p 3000:3000 solidstart
+podman stop -l
+podman rm -l
+podman login docker.io
+podman images
+podman push <image-id> docker://docker.io/<username>/website1:0.0
+.0
