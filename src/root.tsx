@@ -12,6 +12,7 @@ import {
   Link,
 } from "solid-start";
 import { ErrorBoundary } from "solid-start/error-boundary";
+//import "./tailwind.css";
 
 export default function Root() {
   return (

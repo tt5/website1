@@ -9,3 +9,11 @@ podman login docker.io
 podman images
 podman push <image-id> docker://docker.io/<username>/website1:0.0
 .0
+devspace init
+devspace use namespace website1
+
+
+npm run build
+cp dist/public/assets/entry-client-*.css  public/static/styles.css
+src/root.tsx comment out tailwind css file import
+npm run build

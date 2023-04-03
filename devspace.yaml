@@ -1,0 +1,26 @@
+version: v2beta1
+name: website1git
+
+pipelines:
+  dev:
+    run: |-
+      start_dev app
+
+dev:
+  app:
+    # Search for the container that runs this image
+    imageSelector: docker.io/node:19.8.1-slim
+    # Replace the container image with this dev-optimized image (allows to skip image building during development)
+    devImage: docker.io/node:19.8.1-slim
+    sync:
+      - path: ./:/usr/src/app
+        uploadExcludePaths:
+          - node_modules
+        uploadExcludeFile: .dockerignore
+    terminal:
+      command: /usr/src/app/devspace_start.sh
+    ssh:
+      enabled: true
+    ports:
+      - port: "9229"
+      - port: "3000"
