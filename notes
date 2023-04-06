@@ -2,18 +2,22 @@ systemctl enable --user podman.socket
 systemctl start --user podman.socket
 
 podman build . -t solidstart
+
 podman run -dt -p 3000:3000 solidstart
 podman stop -l
 podman rm -l
-podman login docker.io
+
+(podman login docker.io)
 podman images
-podman push <image-id> docker://docker.io/<username>/website1:0.0
-.0
+podman push <image-id> docker://docker.io/<username>/website1:0.0.x
+podman image prune
+
 devspace init
 devspace use namespace website1
-
 
 npm run build
 cp dist/public/assets/entry-client-*.css  public/static/styles.css
 src/root.tsx comment out tailwind css file import
 npm run build
+cat dist/public/assets/entry-client-*.css ../website-css/styles/styles.css
+

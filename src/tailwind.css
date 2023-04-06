@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-size: clamp(100%, 90% + 0.5vi, 150%);
+  line-height: 1.35;
+}
+
+*,
+*::before,
+*::after {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 2px solid crimson;
+  outline-offset: 2px;
+}
+
+*::selection {
+  background: crimson;
+}
+
+body {
+  @apply text-black dark:text-white dark:bg-black;
+}
+
+a {
+  @apply underline hover:bg-yellow-400 hover:text-black dark:hover:bg-yellow-800 dark:hover:text-white;
+}
+
+:where(h1, h2, h3) {
+  line-height: 1.1;
+  @apply font-bold;
+}
+
+h1 {
+  font-size: 3rem;
+  @apply px-2 pt-6;
+}
+
+h2 {
+  font-size: 1.5rem;
+  @apply px-2 pt-2;
+}
+
+h3 {
+  @apply px-2 pt-2;
+}
+
+p {
+  @apply px-2 py-2 max-w-prose dark:font-light;
+  hyphens: auto;
+}
+
+:where(header, nav, main, footer) {
+  @apply outline outline-1 outline-yellow-400 dark:outline-yellow-600;
+}
+
+:where(sup) {
+  line-height: 1;
+}
