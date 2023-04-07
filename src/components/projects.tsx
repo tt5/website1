@@ -7,7 +7,7 @@ export function Projects() {
           px-2
         "
       >
-        solidstart oauth(github) civo
+        solidstart civo
       </div>
       <a 
         class="

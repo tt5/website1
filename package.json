@@ -11,8 +11,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@auth/core": "^0.5.1",
-    "@solid-auth/next": "^0.0.23",
     "@solidjs/meta": "^0.28.4",
     "@solidjs/router": "^0.8.2",
     "jsdom": "^21.1.1",

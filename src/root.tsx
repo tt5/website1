@@ -14,7 +14,6 @@ import {
 import { ErrorBoundary } from "solid-start/error-boundary";
 // TODO: use env variables (DEV, PROD)
 //import "./tailwind.css";
-//import { NavBar } from "./components/auth"
 
 
 export default function Root() {

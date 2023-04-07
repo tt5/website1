@@ -1,5 +1,4 @@
 import { A, Outlet } from 'solid-start';
-import NavBar from "../components/auth"
 import { createEffect, createSignal } from 'solid-js';
 
 const initializeTheme = () => {
@@ -49,7 +48,6 @@ export default function App() {
           >tt5</A>
           <div class="grow h-8">&nbsp;</div>
           <div class="flex gap-4">
-            <NavBar />
           <A
             href="/chess"
             activeClass="bg-yellow-400 dark:bg-yellow-800"
