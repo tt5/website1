@@ -19,5 +19,6 @@ npm run build
 cp dist/public/assets/entry-client-*.css  public/static/styles.css
 src/root.tsx comment out tailwind css file import
 npm run build
-cat dist/public/assets/entry-client-*.css ../website-css/styles/styles.css
+cp dist/public/assets/entry-client-*.css ../website-css/styles/styles.css
 
+cp dist/public/static/styles.css ../website-css/styles/styles.css

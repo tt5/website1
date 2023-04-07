@@ -13,7 +13,7 @@ import {
 } from "solid-start";
 import { ErrorBoundary } from "solid-start/error-boundary";
 // TODO: use env variables (DEV, PROD)
-import "./tailwind.css";
+//import "./tailwind.css";
 //import { NavBar } from "./components/auth"
 
 

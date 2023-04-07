@@ -1,6 +1,14 @@
 export function Projects() {
   return (
-    <div class="flex flex-col pt-2">
+    <div class="flex flex-col pt-4 gap-1">
+      <div 
+        class="
+          self-start
+          px-2
+        "
+      >
+        solidstart oauth(github) civo
+      </div>
       <a 
         class="
           self-start
