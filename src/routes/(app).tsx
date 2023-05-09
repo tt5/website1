@@ -54,6 +54,10 @@ export default function App() {
             inactiveClass="bg-white dark:bg-black"
             class="px-2"
           >chess</A>
+          <a
+            href="https://dashboard.tt15551.cc"
+            class="px-2"
+          >enter</a>
           <ThemeToggler />
           </div>
         </div>
